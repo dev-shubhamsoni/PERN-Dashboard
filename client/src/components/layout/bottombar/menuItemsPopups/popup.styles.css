@@ -1,0 +1,32 @@
+.DropDown {
+    animation: dropDown 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes dropDown {
+    from {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+  }
+
+
+
+
+  .popLeft {
+    animation: popleftEffect 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes popleftEffect {
+    from {
+      opacity: 0;
+      transform: translateX(0px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(10px);
+    }
+  }
