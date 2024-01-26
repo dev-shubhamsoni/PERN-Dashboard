@@ -17,7 +17,6 @@ const ManagementPopup = () => {
   const { management } = useSelector((state: RootState) => state.menuPopup);
 
   const admin = management.admin;
-  const performance = management.performance;
 
   return (
     <div className="hidden md:flex absolute bottom-16 DropDown max-w-[50vw] h-[20vh] bg-white rounded-t-3xl gap-[2vw] pr-[2vw] items-center">

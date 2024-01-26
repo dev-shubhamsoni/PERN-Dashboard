@@ -1,7 +1,7 @@
 import { BottomBar } from "./bottombar/bottomBar.component";
 import Navigation from "./navigation/navigation.component";
 import { Outlet } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import { RootState } from "../../store/store";
 import ClientPopup from "./bottombar/menuItemsPopups/clientPopup.component";
 import SalesPopup from "./bottombar/menuItemsPopups/salesPopup.component";

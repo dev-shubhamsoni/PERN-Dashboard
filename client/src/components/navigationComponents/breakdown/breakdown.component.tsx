@@ -8,6 +8,7 @@ import BreakdownChart from "../../reuseableComponents/breakdownChart/breakdownCh
 const Breakdown: React.FC<React.HTMLProps<HTMLDivElement>> = () => {
   const heading: string = "Breakdown";
   const subHeading: string = "Pie Chart showing Breakdown by categories.";
+  
   const { data, isLoading, isSuccess } = useGetSalesQuery();
   const [internalLoading] = useLoading(isLoading, 2000);
 

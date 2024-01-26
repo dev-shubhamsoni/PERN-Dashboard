@@ -1,7 +1,6 @@
 import {
   Sheet,
   SheetContent,
-  SheetHeader,
   SheetTrigger,
 } from "../../../ui/sheet";
 import { Button } from "../../../ui/button";

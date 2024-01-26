@@ -18,8 +18,8 @@ import './assets/cuberto.scss'
 function App() {
   MouseFollower.registerGSAP(gsap);
 
+  // @ts-expect-ignore
   const cursor = new MouseFollower({
-    
     speed: 0.6
 });
   
