@@ -27,7 +27,8 @@ const ClientPopup = () => {
   
 
   return (
-    <div className="absolute bottom-16 DropDown max-w-[50vw] h-[20vh] bg-white rounded-t-3xl flex gap-[2vw] pr-[2vw] items-center">
+    <div className=" hidden md:flex absolute bottom-16 DropDown w-[70vw] h-[20vh] bg-white rounded-t-3xl gap-[2vw] pr-[2vw] justify-center items-center">
+      
       <div className=" flex flex-col justify-between items-center h-[17vh] w-[4vw] border-r-2">
         <X
           onClick={() =>
@@ -49,9 +50,14 @@ const ClientPopup = () => {
           }
           className=" mt-[1vw] cursor-pointer hover:animate-bounce"
         />
+
         <HomeIcon className=" mb-[1vw]  hover:animate-bounce" />
+
       </div>
+
+
       <div className=" grid grid-cols-2 gap-x-[1vw] items-center h-[15vh]">
+
         <button
           onClick={() =>
             handleClick("products", [

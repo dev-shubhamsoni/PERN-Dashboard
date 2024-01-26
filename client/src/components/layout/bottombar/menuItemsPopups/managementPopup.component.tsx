@@ -20,7 +20,7 @@ const ManagementPopup = () => {
   const performance = management.performance;
 
   return (
-    <div className="absolute bottom-16 DropDown max-w-[50vw] h-[20vh] bg-white rounded-t-3xl flex gap-[2vw] pr-[2vw] items-center">
+    <div className="hidden md:flex absolute bottom-16 DropDown max-w-[50vw] h-[20vh] bg-white rounded-t-3xl gap-[2vw] pr-[2vw] items-center">
       <div className=" flex flex-col justify-between items-center h-[17vh] w-[4vw] border-r-2">
         <X
           onClick={() =>

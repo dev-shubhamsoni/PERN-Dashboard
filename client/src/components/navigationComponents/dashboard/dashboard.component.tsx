@@ -32,6 +32,18 @@ const Dashboard: React.FC<React.HTMLProps<HTMLDivElement>> = () => {
 
   const [internalLoading] = useLoading(isLoading, 2000);
 
+  const formatterData =
+    salesData &&
+    salesData.length > 0 &&
+    salesData[0].sales_by_category &&
+    salesData[0].sales_by_category.length > 0
+      ? Object.entries(salesData[0].sales_by_category[0]).map(([category, sales]) => ({
+          id: category,
+          label: category,
+          value: sales,
+        }))
+      : [];
+
   return (
     <div className="scrollbarToHide flex-wrap overflow-y-auto gap-5 h-[36rem] w-[90vw] p-[15px] rounded-3xl flex justify-between items-center ">
       {internalLoading ? (
@@ -160,10 +172,133 @@ const Dashboard: React.FC<React.HTMLProps<HTMLDivElement>> = () => {
             
           </div>
 
-          <BreakdownChart
-            isDashboard={true}
-            data={salesIsSuccess ? salesData : {}}
-          />
+          <div 
+      className={`h-["400px"] 
+    min-h-["325px" ]
+    min-w-["325px" ] relative
+    
+    rounded-lg p-[5px] bg-white w-[100%] col-span-12 row-span-3 lg:col-span-5 lg:row-span-4' 
+    `}
+    >
+      <ResponsivePie
+        data={formatterData}
+        margin={{ top: 10, right: 80, bottom: 60, left: 50 } }
+        innerRadius={0.5}
+        padAngle={0.7}
+        cornerRadius={3}
+        activeOuterRadiusOffset={8}
+        borderWidth={1}
+        borderColor={{
+          from: "color",
+          modifiers: [["darker", 0.2]],
+        }}
+        enableArcLabels={true}
+        arcLinkLabelsSkipAngle={10}
+        arcLinkLabelsTextColor="#333333"
+        arcLinkLabelsThickness={2}
+        arcLinkLabelsColor={{ from: "color" }}
+        arcLabelsSkipAngle={10}
+        arcLabelsTextColor={{
+          from: "color",
+          modifiers: [["darker", 2]],
+        }}
+        defs={[
+          {
+            id: "dots",
+            type: "patternDots",
+            background: "inherit",
+            color: "rgba(255, 255, 255, 0.3)",
+            size: 4,
+            padding: 1,
+            stagger: true,
+          },
+          {
+            id: "lines",
+            type: "patternLines",
+            background: "inherit",
+            color: "rgba(255, 255, 255, 0.3)",
+            rotation: -45,
+            lineWidth: 6,
+            spacing: 10,
+          },
+        ]}
+        fill={[
+          {
+            match: {
+              id: "ruby",
+            },
+            id: "dots",
+          },
+          {
+            match: {
+              id: "c",
+            },
+            id: "dots",
+          },
+          {
+            match: {
+              id: "go",
+            },
+            id: "dots",
+          },
+          {
+            match: {
+              id: "python",
+            },
+            id: "dots",
+          },
+          {
+            match: {
+              id: "scala",
+            },
+            id: "lines",
+          },
+          {
+            match: {
+              id: "lisp",
+            },
+            id: "lines",
+          },
+          {
+            match: {
+              id: "elixir",
+            },
+            id: "lines",
+          },
+          {
+            match: {
+              id: "javascript",
+            },
+            id: "lines",
+          },
+        ]}
+        legends={[
+          {
+            anchor: "bottom",
+            direction: "row",
+            justify: false,
+            translateX: 20,
+            translateY: 50 ,
+            itemsSpacing: 0,
+            itemWidth: 100,
+            itemHeight: 18,
+            itemTextColor: "#999",
+            itemDirection: "left-to-right",
+            itemOpacity: 1,
+            symbolSize: 18,
+            symbolShape: "circle",
+            effects: [
+              {
+                on: "hover",
+                style: {
+                  itemTextColor: "#000",
+                },
+              },
+            ],
+          },
+        ]}
+      />
+    </div>
         </div>
       )}
     </div>

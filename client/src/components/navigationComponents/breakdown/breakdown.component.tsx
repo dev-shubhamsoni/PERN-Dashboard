@@ -20,7 +20,7 @@ const Breakdown: React.FC<React.HTMLProps<HTMLDivElement>> = () => {
           <Loader />
         </div>
       ) : (
-        <BreakdownChart data={isSuccess ? data : {}}/>
+        <BreakdownChart isDashboard={false} data={isSuccess ? data : {}}/>
       )}
     </div>
   );

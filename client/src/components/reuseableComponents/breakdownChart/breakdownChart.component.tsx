@@ -17,14 +17,7 @@ const BreakdownChart = ({ isDashboard = false, data}) => {
 
 
   return (
-    <div id="box-7"
-      className={`h-[${isDashboard ? "400px" : "100%"}] 
-    min-h-[${isDashboard ? "325px" : undefined}]
-    min-w-[${isDashboard ? "325px" : undefined}] relative
     
-    ${isDashboard ? 'rounded-lg p-[5px] bg-white w-[100%] col-span-12 row-span-3 lg:col-span-5 lg:row-span-4' : ''}
-    `}
-    >
       <ResponsivePie
         data={formatterData}
         margin={isDashboard ? { top: 10, right: 80, bottom: 60, left: 50 } : { top: 40, right: 80, bottom: 80, left: 80 }}
@@ -143,7 +136,7 @@ const BreakdownChart = ({ isDashboard = false, data}) => {
           },
         ]}
       />
-    </div>
+    
   );
 };
 
