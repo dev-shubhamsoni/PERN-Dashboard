@@ -70,7 +70,7 @@ const Transactions: React.FC<React.HTMLProps<HTMLFormElement>> = () => {
 
   const finApi = async () => {
     const res = await fetch(
-      `http://localhost:4003/api/v1/client/transactions?page=${page}&pageSize=${entries}`
+      `api/v1/client/transactions?page=${page}&pageSize=${entries}`
     );
     const data = await res.json();
     setdata(data);

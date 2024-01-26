@@ -122,7 +122,7 @@ const SalesPopup = () => {
       {overview && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Overview:</span>These are Overview
+            <b>Line chart</b> showing Total sales and Total units using a <b>dropdown</b>.
           </p>
         </div>
       )}
@@ -130,7 +130,7 @@ const SalesPopup = () => {
       {daily && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Daily:</span>These are Daily
+          <b>Line chart</b> where you can select the <b>range</b> using a calendar.
           </p>
         </div>
       )}
@@ -138,7 +138,7 @@ const SalesPopup = () => {
       {monthly && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Monthly:</span>These are Monthly
+          <b>Double Line chart</b> comapring sales with units.
           </p>
         </div>
       )}
@@ -146,7 +146,7 @@ const SalesPopup = () => {
       {breakdown && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Breakdown:</span>These are Breakdown
+          <b>Pie Chart</b> showing all the categories.
           </p>
         </div>
       )}

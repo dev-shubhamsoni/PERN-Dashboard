@@ -27,7 +27,7 @@ const ClientPopup = () => {
   
 
   return (
-    <div className=" hidden md:flex absolute bottom-16 DropDown w-[70vw] h-[20vh] bg-white rounded-t-3xl gap-[2vw] pr-[2vw] justify-center items-center">
+    <div className=" hidden md:flex absolute bottom-16 DropDown max-w-[50vw] h-[20vh] bg-white rounded-t-3xl gap-[2vw] pr-[2vw] items-center">
       
       <div className=" flex flex-col justify-between items-center h-[17vh] w-[4vw] border-r-2">
         <X
@@ -127,28 +127,28 @@ const ClientPopup = () => {
       {products && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Products:</span>These are prodcuts
+            Displayed the list of all the Products, used <b>RTK query</b> to fetch all the products from the database.
           </p>
         </div>
       )}
       {customers && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Customers:</span>These are prodcuts
+            Implemented <b>client side pagination</b> and <b>filtering</b>.
           </p>
         </div>
       )}
       {transactions && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Transctions:</span>These are prodcuts
+          Implemented <b>server side pagination</b> using <b>SQL</b> and <b>RTK query</b>.
           </p>
         </div>
       )}
       {geography && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Geography:</span>These are prodcuts
+            Displayed the <b>Geographical map</b> which is showing the users by countries.
           </p>
         </div>
       )}

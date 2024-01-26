@@ -11,7 +11,6 @@ const Performance: React.FC<React.HTMLProps<HTMLDivElement>> = () => {
   const subHeading = "See your list of Products";
   const { data, isLoading } = useGetUserPerformanceQuery(idUser);
   const [internalLoading] = useLoading(isLoading, 2000);
-  console.log(data);
 
   return (
     <div className="scrollbarToHide flex flex-col gap-5 h-[78vh] w-[90vw] p-[25px] bg-white rounded-3xl overflow-y-auto">

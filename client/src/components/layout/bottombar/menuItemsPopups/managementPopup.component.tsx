@@ -47,7 +47,7 @@ const ManagementPopup = () => {
           <p className="z-10">Admin</p>
         </button>
 
-        <button
+        {/* <button
           onClick={() => handleClick("performance", ["admin"])}
           className="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-10 w-[10vw] rounded-md bg-sky-800 p-2 flex justify-center items-center font-semibold"
         >
@@ -57,24 +57,24 @@ const ManagementPopup = () => {
           <div className="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-[#95554d] delay-150 group-hover:delay-200"></div>
           <div className="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-[#936639] delay-150 group-hover:delay-300"></div>
           <p className="z-10">Performance</p>
-        </button>
+        </button> */}
       </div>
 
       {admin && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
-            <span>Admin:</span>These are Admin
+            <>Table</> showing a list of all the admins
           </p>
         </div>
       )}
 
-      {performance && (
+      {/* {performance && (
         <div className="popLeft w-[20vw] p-[10px] border-l-2">
           <p>
             <span>Performance:</span>These are Performance
           </p>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
