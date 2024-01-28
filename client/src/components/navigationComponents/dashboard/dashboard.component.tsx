@@ -45,7 +45,7 @@ const Dashboard: React.FC<React.HTMLProps<HTMLDivElement>> = () => {
       : [];
 
   return (
-    <div className="scrollbarToHide flex-wrap overflow-y-auto gap-5 h-[36rem] w-[90vw] p-[15px] rounded-3xl flex justify-between items-center ">
+    <div className="scrollbarToHide flex-wrap overflow-y-auto gap-5 h-[78vh] w-[90vw] p-[15px] rounded-3xl flex justify-between items-center ">
       {internalLoading ? (
         <div className="  flex justify-center items-center h-[78vh] w-[90vw]">
           <Loader />

@@ -17,9 +17,7 @@ export const BottomBar = () => {
     <div
       className="
         
-        flex bg-[#fff] border-t-[2px] border-[#76a881] h-[4rem] 
-        w-[100%]
-        "
+        flex bg-[#fff] border-t-[2px] border-[#76a881] h-[4rem] w-[100%]"
     >
       <div className=" hidden md:flex bg-[#4caf50]  border-dashed w-[12rem] h-[4rem]  justify-center align-middle items-center">
         <p className=" text-[#fff]  hover:scale-[110%]  transition duration-500 ease-in-out">
